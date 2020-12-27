@@ -66,7 +66,7 @@ describe('Work with Alerts', () => {
         cy.get('#prompt').click();
     })
 
-    it.only('Desafio', () => {
+    it('Desafio', () => {
         const pessoa = {
             nome: 'Márcio',
             sobrenome: 'Corrêa',
@@ -89,6 +89,8 @@ describe('Work with Alerts', () => {
         cy.get('#resultado > :nth-child(1)').should('contain', 'Cadastrado!')
     })
 
-
+    it.only('Alert with comands', () => {
+        cy.clickAlert('#alert', 'Alert Simples')
+    })
 
 })
